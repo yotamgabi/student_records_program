@@ -1,6 +1,3 @@
-from classes.Course import Course
-
-
 class Student:
     def __init__(self, student_id: int, name: str, age: int):
         self._id = student_id
@@ -18,5 +15,3 @@ class Student:
     @property
     def age(self):
         return self._age
-
-
