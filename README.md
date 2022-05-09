@@ -17,4 +17,4 @@
     - per student
     - per course 
 
-Note: Course object is unknowm to User. 
+Note: Course object is unknown to User. 
