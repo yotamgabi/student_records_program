@@ -1,10 +1,19 @@
 # Student Records Program
 
 #### A program which manages student records.
-#### A record contains: student's name, age, courses, grades
+#### A record contains: 
+1. name
+2. age
+3. courses
+4. grades dict (a method dacorated as property) 
 
-Lookups:
-  students: add and remove them, num of students, student list \n 
-  grades: per student, per course 
-  
-  
+<b>Lookups:</b>
+1. students:
+    - add and remove them
+    - num of students
+    - student list
+2. grades:
+    - per student
+    - per course 
+
+Note: Course object is unknowm to User. 
