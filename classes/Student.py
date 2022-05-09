@@ -19,7 +19,4 @@ class Student:
     def age(self):
         return self._age
 
-    @property
-    def courses(self):
-        return self._courses
 
