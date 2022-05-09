@@ -4,7 +4,7 @@
 #### A record contains: student's name, age, courses, grades
 
 Lookups:
-  students: add and remove them, num of students, student list
+  students: add and remove them, num of students, student list \n 
   grades: per student, per course 
   
   
