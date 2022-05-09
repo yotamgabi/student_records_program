@@ -8,4 +8,3 @@ if __name__ == '__main__':
     student_list = [Student(12346, "Yotam", 30), Student(123123, "Hagai", 25)]
     summer_2022 = StudentCourseRegistry("Summer", 2022)
 
-    print()
