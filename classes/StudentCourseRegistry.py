@@ -12,7 +12,7 @@ class StudentCourseRegistry:
         self._student_to_courses = {}
         """
         maps each student to courses list. note that the list is vert much finite meaning:
-        O(1) space and time complexity when we lookup student course list
+        O(1) space and time complexity when we lookup course-to-student 
         """
 
         # allowed properties for constructor in classes \ config.py
@@ -37,9 +37,10 @@ class StudentCourseRegistry:
     def grades_of(self, course_or_student):  # can get course or student as input
         if type(course_or_student) == Student:
             student_grades = {}
-            for course in self._grades_per_course:
-                if course_or_student in course:
-                    student_grades[course] = course[course_or_student]
+            for course in self._grades_per_course.keys():
+                course_grade = self._grades_per_course[course][course_or_student]
+                if course_grade:
+                    student_grades[course] = course_grade
             return student_grades
         else:
             return self._grades_per_course[course_or_student]
@@ -49,3 +50,6 @@ class StudentCourseRegistry:
             self._grades_per_course[course][student] = grade
         else:  # new course data
             self._grades_per_course[course] = {student: grade}
+    @property
+    def open_semesters(self):
+        return self._open_semesters
