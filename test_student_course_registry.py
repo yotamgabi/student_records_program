@@ -41,10 +41,17 @@ class TestCalc(unittest.TestCase):
         grades_student1 = {self.course1: 99.522, self.course2: 85.2}
         self.assertDictEqual(self.summer_2022.grades_of(self.student1), grades_student1)
         # Tests for calling the function by a course:
-
+        grades_course1 = {self.student1: 99.522, self.student2: 91.225}
+        self.assertDictEqual(self.summer_2022.grades_of(self.course1), grades_course1)
 
     def test_set_grade(self):
-        pass
+        # updating field:
+        self.summer_2022.set_grade(self.student1, self.course1, 60)
+        # Tests for calling the function by a student:]
+        grades_student1 = {self.course1: 60, self.course2: 85.2}
+        self.assertDictEqual(self.summer_2022.grades_of(self.student1), grades_student1)
+        grades_course1 = {self.student1: 60, self.student2: 91.225}
+        self.assertDictEqual(self.summer_2022.grades_of(self.course1), grades_course1)
 
 
 if __name__ == '__main__':

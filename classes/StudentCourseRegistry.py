@@ -46,7 +46,7 @@ class StudentCourseRegistry:
             return self._grades_per_course[course_or_student]
 
     def set_grade(self, student: Student, course: Course, grade: float):
-        if student in self._grades_per_course:
+        if course in self._grades_per_course:
             self._grades_per_course[course][student] = grade
         else:  # new course data
             self._grades_per_course[course] = {student: grade}
